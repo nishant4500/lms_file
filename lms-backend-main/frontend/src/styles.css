@@ -1,0 +1,257 @@
+:root {
+  font-family: Inter, Segoe UI, Roboto, Arial, sans-serif;
+  color: #e6edf6;
+  background-color: #0a1020;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 15% -10%, rgba(86, 160, 255, 0.35), transparent 35%),
+    radial-gradient(circle at 100% 0%, rgba(163, 74, 255, 0.25), transparent 30%),
+    radial-gradient(circle at top, #172748 0%, #0a1020 45%, #070b16 100%);
+}
+
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(120deg, rgba(33, 57, 105, 0.9), rgba(15, 26, 49, 0.92));
+  border: 1px solid rgba(114, 150, 214, 0.4);
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 16px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+}
+
+.heroGlow {
+  position: absolute;
+  inset: -20% auto auto -5%;
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(circle, rgba(98, 146, 255, 0.45), transparent 60%);
+  pointer-events: none;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+}
+
+.kicker {
+  margin: 0 0 8px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: #93ccff;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 2.1rem;
+  line-height: 1.1;
+}
+
+.hero p {
+  margin: 6px 0 0;
+  color: #a8bbd9;
+}
+
+.session {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.session.premium {
+  position: relative;
+  z-index: 1;
+  background: rgba(7, 17, 33, 0.6);
+  border: 1px solid rgba(130, 166, 229, 0.35);
+  border-radius: 14px;
+  padding: 10px;
+}
+
+.userName {
+  color: #d8e8ff;
+  font-weight: 700;
+}
+
+.badge {
+  background: #132445;
+  border: 1px solid #2f4c7b;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+}
+
+.notice {
+  margin: 0 0 18px;
+  background: #102036;
+  border: 1px solid #29486c;
+  border-radius: 12px;
+  padding: 10px 14px;
+  color: #cfe6ff;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(160px, 1fr));
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.stats article {
+  background: linear-gradient(145deg, rgba(24, 39, 69, 0.96), rgba(14, 25, 46, 0.95));
+  border: 1px solid rgba(88, 122, 182, 0.45);
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.stats h3 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #d9e8ff;
+}
+
+.stats p {
+  margin: 5px 0 0;
+  color: #abc1e3;
+}
+
+.panel {
+  background: rgba(18, 28, 48, 0.9);
+  border: 1px solid rgba(83, 112, 161, 0.4);
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.authPanel {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.panelHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.panel h2 {
+  margin: 0 0 12px;
+  font-size: 1.2rem;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.grid {
+  display: grid;
+  gap: 10px;
+}
+
+input,
+select,
+button,
+.linkBtn {
+  border-radius: 10px;
+  border: 1px solid #375177;
+  min-height: 40px;
+  padding: 8px 12px;
+  font-size: 0.95rem;
+}
+
+input,
+select {
+  background: #0d1b32;
+  color: #e8efff;
+}
+
+button,
+.linkBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #2f68ff, #3f88ff);
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+}
+
+button.secondary {
+  background: #1c355d;
+  border: 1px solid #3a6299;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.list {
+  margin-top: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.listItem {
+  background: #0f1f37;
+  border: 1px solid #2f4c77;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.listItem h3 {
+  margin: 0;
+}
+
+.listItem p {
+  margin: 6px 0 0;
+  color: #b2c6e6;
+  max-width: 70ch;
+}
+
+.hint {
+  margin: 8px 0 0;
+  color: #9bb7e1;
+}
+
+@media (max-width: 960px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
