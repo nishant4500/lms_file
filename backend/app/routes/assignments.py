@@ -1,3 +1,4 @@
+from typing import List
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from app import schemas, crud, models
@@ -33,3 +34,7 @@ def submit_assignment(id: int, submission: schemas.SubmissionCreate, db: Session
         
     updated = crud.create_submission(db, id, current_user.id, submission.content)
     return {"msg": "Assignment submitted successfully"}
+
+@router.get("/courses/{course_id}/assignments", response_model=List[schemas.AssignmentResponse])
+def get_course_assignments(course_id: int, db: Session = Depends(get_db), current_user: models.User = Depends(get_current_user)):
+    return db.query(models.Assignment).filter(models.Assignment.course_id == course_id).all()

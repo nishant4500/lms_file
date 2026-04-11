@@ -241,17 +241,95 @@ button.secondary {
   color: #9bb7e1;
 }
 
-@media (max-width: 960px) {
-  .stats {
-    grid-template-columns: 1fr;
-  }
+/* Certificate Styles */
+.certificate {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 60px;
+  background: #fff;
+  color: #333;
+  border: 15px solid #2f68ff;
+  border-radius: 0;
+  text-align: center;
+  box-shadow: 0 0 50px rgba(0,0,0,0.5);
+  position: relative;
+  font-family: 'Times New Roman', serif;
+}
 
-  .split {
-    grid-template-columns: 1fr;
-  }
+.certificate::before {
+  content: '';
+  position: absolute;
+  top: 10px; left: 10px; right: 10px; bottom: 10px;
+  border: 2px solid #3f88ff;
+}
 
-  .hero {
-    flex-direction: column;
-    align-items: flex-start;
+.certificate h1 {
+  font-size: 3.5rem;
+  margin: 0;
+  color: #1c355d;
+}
+
+.certificate h2 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #666;
+  margin: 20px 0;
+}
+
+.certificate .name {
+  font-size: 2.5rem;
+  font-style: italic;
+  margin: 20px 0;
+  border-bottom: 2px solid #ccc;
+  display: inline-block;
+  padding: 0 40px;
+}
+
+.certificate .course {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2f68ff;
+  margin: 10px 0;
+}
+
+.certificate .date {
+  margin-top: 40px;
+  font-size: 1rem;
+  color: #666;
+}
+
+.certificate .seal {
+  width: 100px;
+  height: 100px;
+  background: #ffcc00;
+  border-radius: 50%;
+  margin: 30px auto;
+  border: 4px double #cc9900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #996600;
+  font-size: 0.8rem;
+  transform: rotate(-15deg);
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .certificate, .certificate * {
+    visibility: visible;
+  }
+  .certificate {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    border: 10px solid #1c355d;
+    box-shadow: none;
   }
 }

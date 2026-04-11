@@ -35,7 +35,7 @@ async def integrity_exception_handler(request: Request, exc: IntegrityError):
 def root():
     return {"message": "LMS running"}
 
-from app.routes import modules, enrollments, assignments, progress, resources
+from app.routes import modules, enrollments, assignments, progress, resources, quizzes, certificates
 
 app.include_router(auth.router)
 app.include_router(courses.router)
@@ -44,6 +44,8 @@ app.include_router(enrollments.router)
 app.include_router(assignments.router)
 app.include_router(progress.router)
 app.include_router(resources.router)
+app.include_router(quizzes.router)
+app.include_router(certificates.router)
 
 frontend_dist_dir = Path(__file__).resolve().parent.parent / "frontend" / "dist"
 if frontend_dist_dir.exists():
