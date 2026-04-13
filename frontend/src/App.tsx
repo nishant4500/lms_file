@@ -13,7 +13,7 @@ type Certificate = { id: number; student_id: number; course_id: number; issue_da
 
 type UserSession = { token: string; role: Role; userId: number; name: string };
 
-const API_BASE = import.meta.env.DEV ? "http://localhost:8000" : "";
+const API_BASE = import.meta.env.DEV ? "blah-crawfxeuh7hbc0gm.centralindia-01.azurewebsites.net" : "";
 
 async function api<T>(path: string, init?: RequestInit, token?: string): Promise<T> {
   const headers = new Headers(init?.headers ?? {});
